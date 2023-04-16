@@ -15,7 +15,7 @@
 
 .bg-container{
   background-color: #ca94a3;
-  height: 180px;
+  height: 150px;
 }
 .btn-container{
   width: 350px;
@@ -80,7 +80,7 @@
 }
 
 .task-container{
-  height: 600px;
+  height:100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

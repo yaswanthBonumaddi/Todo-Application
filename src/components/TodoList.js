@@ -4,6 +4,7 @@ import {PlusCircle} from 'react-bootstrap-icons';
 import Card from './Card';
 
 
+
 const TodoList = () => {
     const [modal, setModal] = useState(false);
     const [taskList, setTaskList] = useState([])
@@ -54,8 +55,10 @@ if (hrs < 12)
   greet = 'Good Morning';
 else if (hrs >= 12 && hrs <= 17)
   greet = 'Good Afternoon';
-else if (hrs >= 17 && hrs <= 24)
+else if (hrs >= 17 && hrs <= 19)
   greet = 'Good Evening';
+else if (hrs >= 19 && hrs <= 24)
+  greet = 'Good Night';
 
 
   return (
@@ -73,14 +76,6 @@ else if (hrs >= 17 && hrs <= 24)
                     </div>
                 </div>
             </div>
-                <center>
-                    <div className='btn-container'>
-                        <button className='button'>All</button>
-                        <button className='button'>Personal</button>
-                        <button className='button'>Office</button>
-                        <button className='button'>Completed</button>
-                    </div>
-                </center>
         </div>
             <div className='task-container'>
                 {taskList.map((item,index)=><Card taskObj={item} index={index} deleteTask={deleteTask} updateListArray={updateListArray}/>)}
